@@ -34,4 +34,6 @@ body{
     background: #555;
 }
 
-  
+  img{
+      filter:brightness(110%)
+  }
