@@ -1,12 +1,12 @@
-import newProfileImg from '../images/me.jpg'
-
+import NewProfileImg from '../images/me.jpg'
+console.log(NewProfileImg)
 function Info() {
 
     return (
          <div className = "flex flex-col items-center" >
-        <img src = { newProfileImg }
+        <img src = {NewProfileImg}
         className = "w-full rounded-t-lg h-96"
-        alt = "Profile" > </img> < div className = "flex flex-col items-center w-full px-10" >
+        alt = "Profile" /> < div className = "flex flex-col items-center w-full px-10" > 
         <h1 className = "text-4xl mt-4  text-white" > Mutesa Cedric </h1> <h3 className = "text-xl text-[#F3BF99] capitalize" > fullstack developer </h3> 
         <a href="https://mcedric.netlify.app"className = "text-[#F5F5F5] text-lg mt-3 mb-5" > mcedric.netlify.app </a>
 
