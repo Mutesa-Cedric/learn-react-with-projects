@@ -1,13 +1,13 @@
 import React from "react";
 
-let Main=()=>{
+let Main=(props)=>{
 
     return (
-        <div id="mainDiv" className="bg-slate-900  flex items-center justify-center flex-col w-full h-[90%]">
-            <h1 className="text-3xl font-bold absolute bottom-[68%] right-[45%]  text-white">
+        <div id="mainDiv" className={props.darkMode?"bg-slate-900 text-white  flex items-center justify-center flex-col w-full h-[90%]":"bg-white  flex items-center text-black justify-center flex-col w-full h-[90%]"}>
+            <h1 className="text-3xl font-bold absolute bottom-[68%] right-[45%]">
                 Fun facts about React
             </h1>
-            <div className="flex flex-col items-start justify-evenly text-white text-md h-3/6">
+            <div className="flex flex-col items-start justify-evenly text-md h-3/6">
                 <div className="flex items-center">
                     <span className="text-xl mx-4 bg-cyan-500 h-3 w-3 rounded-[50%]">
                         </span>
