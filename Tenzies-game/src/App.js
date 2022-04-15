@@ -32,8 +32,8 @@ function App() {
   const [lost,setLost] = useState(false)
   const [rolls, setRolls] = useState(0)
   const [time, setTime] = useState({
-    min: 1,
-    seconds: 0
+    min: 0,
+    seconds: 35
   })
   const [score, setScore] = useState(1240)
   const [remainingRolls, setRemainingRolls] = useState(30)
@@ -176,8 +176,8 @@ function App() {
     setRemainingRolls(30)
     setOutOfRolls(false)
     setTime({
-      min:1,
-      seconds:0
+      min:0,
+      seconds:35
     })
     setLost(false)  
   }
@@ -195,8 +195,8 @@ function App() {
           </div>
           {!tenzies && <button onClick={rollDice} className="bg-[#5035FF] hover:bg-[#0B2434] hover:text-white text-white text-xl px-12 rounded-md py-2">Roll</button>}
           {tenzies && <WinPopup reset={restart} rolls={rolls} timeUsed={time} maxScore={maxScore} score={score}/>}
-          {lost && !tenzies && !outOfRolls &&   <LostPopup reset={restart} rolls={rolls}  score={score}  timeOut={true}/>}
-          {outOfRolls && <LostPopup reset={restart} rolls={rolls}  score={score} timeOut={false}/>}
+          {lost && !tenzies && !outOfRolls &&   <LostPopup reset={restart} timeOut={true}/>}
+          {outOfRolls && <LostPopup reset={restart} timeOut={false}/>}
        </main>
     </div>
   );
